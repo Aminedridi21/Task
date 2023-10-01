@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="signup-box">
+            <div class="title">
+                CREATE   ACCOUNT
+            </div>
+            <form  [formGroup]="SignupForm">
+            <div class="row">
+                <div class="col">
+                    <div class="textboxtop">
+                <input type="text" placeholder="name" formControlName="name" required>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="textboxtop">
+                <input type="text" placeholder="surname" formControlName="surname" required>
+                    </div>
+                </div>
+            </div>
+                 <div class="textbox">
+                    <input  type="email"   placeholder="email" formControlName="email" required> 
+                 </div>
+                 <div class="textbox">
+                    <input  type="password"   placeholder="password" formControlName="password" required> 
+                 </div>
+                 <div class="button">
+                    <input type="button"  value="SIGN UP" (click)="SignUp(SignupForm)" [disabled]="!SignupForm.valid">
+                 </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

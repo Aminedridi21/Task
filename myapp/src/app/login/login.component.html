@@ -1,0 +1,32 @@
+<p>login works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="signup-box">
+            <div class="title">
+            CONNECT  TO YOUR ACCOUNT
+            </div>
+            <form [formGroup]="LoginForm" >
+                 <div class="textbox">
+                    <input  type="text" formControlName="Username"  placeholder="Username" required> 
+                 </div>
+                 <div class="textbox">
+                    <input  type="password" formControlName="Password"  placeholder="Password" required> 
+                 </div>
+                 <div class="button">
+                    <input type="button"  value="LOG IN" (click)="LogIn(LoginForm)" [disabled]="!LoginForm.valid"/>
+                 </div>
+                 <p>D'ont have an account,<a href="signup">Create one</a></p>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
